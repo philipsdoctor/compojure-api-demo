@@ -9,7 +9,7 @@
                           (POST "/foo" []
                                 :summary "Does many Foo things."
                                 :tags ["Info Operations"]
-                                :query-params [req-id :- (describe schema-core/Str "The request-id for OpsCenter to track.")
+                                :query-params [req-id :- (describe schema-core/Str "The request-id for tracking")
                                                {timeout :- (describe schema-core/Int "The timeout in seconds before Foo should be considered failed. Default: 200.") 200}]
                                 :responses {:default {:schema {}}
                                             200 {:schema {}}}
@@ -19,7 +19,7 @@
                           (POST "/bar" []
                                 :summary "Mostly it just does Bar."
                                 :tags ["Another Tag"]
-                                :query-params [req-id :- (describe schema-core/Str "The request-id for OpsCenter to track.")]
+                                :query-params [req-id :- (describe schema-core/Str "The request-id for tracking.")]
                                 :responses {:default {:schema {}}
                                             200 {:schema {}}}
                                 (prn "done")
